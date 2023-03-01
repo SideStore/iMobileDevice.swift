@@ -1,0 +1,7 @@
+module libcurl [system] {
+	header "libcurl.h"
+	header "/usr/include/curl/curl.h"
+
+	link "curl"
+	export *
+}

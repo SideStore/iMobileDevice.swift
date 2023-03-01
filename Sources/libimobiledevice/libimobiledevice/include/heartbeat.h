@@ -1,0 +1,1 @@
+../../dependencies/libimobiledevice/src/heartbeat.h

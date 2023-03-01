@@ -1,0 +1,15 @@
+[submodule "Sources/libimobiledevice/dependencies/libimobiledevice"]
+	path = Sources/libimobiledevice/dependencies/libimobiledevice
+	url = https://github.com/libimobiledevice/libimobiledevice
+[submodule "Sources/libimobiledevice/dependencies/libusbmuxd"]
+	path = Sources/libimobiledevice/dependencies/libusbmuxd
+	url = https://github.com/libimobiledevice/libusbmuxd.git
+[submodule "Sources/libimobiledevice/dependencies/libplist"]
+	path = Sources/libimobiledevice/dependencies/libplist
+	url = https://github.com/libimobiledevice/libplist.git
+[submodule "Sources/libimobiledevice/dependencies/libimobiledevice-glue"]
+	path = Sources/libimobiledevice/dependencies/libimobiledevice-glue
+	url = https://github.com/libimobiledevice/libimobiledevice-glue
+[submodule "Sources/libfragmentzip/libfragmentzip-source"]
+	path = Sources/libfragmentzip/libfragmentzip-source
+	url = https://github.com/SideStore/libfragmentzip.git
