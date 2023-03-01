@@ -64,6 +64,37 @@ let package = Package(
 			type: .dynamic,
 			targets: ["libimobiledevice", "libplist", "libusbmuxd", "libimobiledevice-glue"]),
 
+		// MARK: - libplist
+
+		.library(
+			name: "libplist",
+			targets: ["libplist"]),
+
+		.library(
+			name: "libplist-Static",
+			type: .static,
+			targets: ["libplist"]),
+
+		.library(
+			name: "libplist-Dynamic",
+			type: .dynamic,
+			targets: ["libplist"]),
+
+		// MARK: - libusbmuxd
+
+		.library(
+			name: "libusbmuxd",
+			targets: ["libusbmuxd"]),
+
+		.library(
+			name: "libusbmuxd-Static",
+			type: .static,
+			targets: ["libusbmuxd"]),
+
+		.library(
+			name: "libusbmuxd-Dynamic",
+			type: .dynamic,
+			targets: ["libusbmuxd"]),
 
 		// MARK: - libfragmentzip
 
