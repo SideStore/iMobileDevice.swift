@@ -26,9 +26,9 @@ let package = Package(
     name: "iMobileDevice",
     defaultLocalization: "en",
     platforms: [
-        .iOS(.v14),
-        .tvOS(.v14),
-        .macCatalyst(.v14),
+        .iOS(.v12),
+        .tvOS(.v12),
+        .macCatalyst(.v13),
         .macOS(.v11),
     ],
 
