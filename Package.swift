@@ -138,7 +138,7 @@ let package = Package(
 				.define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
 				.define("HAVE_GETIFADDRS"),
 				.define("HAVE_STRNDUP"),
-				.unsafeFlags(unsafe_flags)
+//				.unsafeFlags(unsafe_flags)
 			],
 			cxxSettings: [
 				.headerSearchPath("../libimobiledevice/dependencies/libimobiledevice"),
@@ -154,7 +154,7 @@ let package = Package(
 				.define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
 				.define("HAVE_GETIFADDRS"),
 				.define("HAVE_STRNDUP"),
-				.unsafeFlags(unsafe_flags_cxx)
+//				.unsafeFlags(unsafe_flags_cxx)
 			]
 		),
 
@@ -261,7 +261,7 @@ let package = Package(
 				.define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
 				.define("HAVE_GETIFADDRS"),
 				.define("HAVE_STRNDUP"),
-				.unsafeFlags(unsafe_flags)
+//				.unsafeFlags(unsafe_flags)
 			],
 			cxxSettings: [
 				.headerSearchPath("include/"),
@@ -279,7 +279,7 @@ let package = Package(
 				.define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
 				.define("HAVE_GETIFADDRS"),
 				.define("HAVE_STRNDUP"),
-				.unsafeFlags(unsafe_flags_cxx)
+//				.unsafeFlags(unsafe_flags_cxx)
 			]
         ),
 
@@ -303,7 +303,7 @@ let package = Package(
 				.define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
 				.define("HAVE_GETIFADDRS"),
 				.define("HAVE_STRNDUP"),
-				.unsafeFlags(unsafe_flags)
+//				.unsafeFlags(unsafe_flags)
 			],
 			cxxSettings: [
 				.headerSearchPath("../libimobiledevice/dependencies/libimobiledevice"),
@@ -319,7 +319,7 @@ let package = Package(
 				.define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
 				.define("HAVE_GETIFADDRS"),
 				.define("HAVE_STRNDUP"),
-				.unsafeFlags(unsafe_flags_cxx)
+//				.unsafeFlags(unsafe_flags_cxx)
 			]
 		),
 
@@ -347,7 +347,7 @@ let package = Package(
 				.define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
 				.define("HAVE_GETIFADDRS"),
 				.define("HAVE_STRNDUP"),
-				.unsafeFlags(unsafe_flags)
+//				.unsafeFlags(unsafe_flags)
 			],
 			cxxSettings: [
 				.headerSearchPath("include/"),
@@ -361,7 +361,7 @@ let package = Package(
 				.define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
 				.define("HAVE_GETIFADDRS"),
 				.define("HAVE_STRNDUP"),
-				.unsafeFlags(unsafe_flags_cxx)
+//				.unsafeFlags(unsafe_flags_cxx)
 			]
         ),
 
@@ -409,7 +409,7 @@ let package = Package(
 				.define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
 				.define("HAVE_GETIFADDRS"),
 				.define("HAVE_STRNDUP"),
-				.unsafeFlags(unsafe_flags)
+//				.unsafeFlags(unsafe_flags)
             ],
             cxxSettings: [
 				.headerSearchPath("include/"),
@@ -423,7 +423,7 @@ let package = Package(
 				.define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
 				.define("HAVE_GETIFADDRS"),
 				.define("HAVE_STRNDUP"),
-				.unsafeFlags(unsafe_flags_cxx)
+//				.unsafeFlags(unsafe_flags_cxx)
             ]
         ),
 
@@ -454,7 +454,7 @@ let package = Package(
                 .define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
                 .define("HAVE_GETIFADDRS"),
                 .define("HAVE_STRNDUP"),
-				.unsafeFlags(unsafe_flags)
+//				.unsafeFlags(unsafe_flags)
             ],
             cxxSettings: [
 				.headerSearchPath("../dependencies/libplist/include"),
@@ -470,7 +470,7 @@ let package = Package(
                 .define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
                 .define("HAVE_GETIFADDRS"),
                 .define("HAVE_STRNDUP"),
-				.unsafeFlags(unsafe_flags_cxx)
+//				.unsafeFlags(unsafe_flags_cxx)
             ]
         )
     ],
