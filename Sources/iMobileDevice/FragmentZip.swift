@@ -37,7 +37,7 @@ public final class FragmentZip {
     ///   - remotePath: remote path
     ///   - savePath: save path
     ///   - progressCallback: progress callback with status from 0 to 1
-    func downloadFile(remotePath: String, savePath: String, progressCallback: fragmentzip_process_callback_t? = nil) throws {
+    public func downloadFile(remotePath: String, savePath: String, progressCallback: fragmentzip_process_callback_t? = nil) throws {
         guard let handle = self.handle else {
             throw FragmentZipError.handleNotInitialized
         }
