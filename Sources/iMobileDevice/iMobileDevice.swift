@@ -10,5 +10,8 @@
 @_exported import libimobiledevice_glue
 @_exported import libplist
 @_exported import libusbmuxd
+@_exported import libfragmentzip
+
+import Foundation
 
 public final class iMobileDevice { }

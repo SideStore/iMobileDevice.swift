@@ -127,7 +127,8 @@ let package = Package(
 				"libimobiledevice",
 				"libplist",
 				"libusbmuxd",
-				"libimobiledevice-glue"
+				"libimobiledevice-glue",
+                "libfragmentzip"
 			],
 			cSettings: [
 				.headerSearchPath("../libimobiledevice/dependencies/libimobiledevice"),
@@ -143,8 +144,7 @@ let package = Package(
 				.define("PACKAGE_STRING", to: "\"SideServer 1.0\""),
 				.define("HAVE_GETIFADDRS"),
 				.define("HAVE_STRNDUP"),
-//                .define("HAVE_CONFIG_H"),
-//                .unsafeFlags(unsafe_flags, .when(configuration: .debug))
+                .unsafeFlags(unsafe_flags, .when(configuration: .debug))
 			],
 			cxxSettings: [
 				.headerSearchPath("../libimobiledevice/dependencies/libimobiledevice"),
@@ -160,8 +160,7 @@ let package = Package(
 				.define("PACKAGE_STRING", to: "\"SideServer 1.0\""),
 				.define("HAVE_GETIFADDRS"),
 				.define("HAVE_STRNDUP"),
-//                .define("HAVE_CONFIG_H"),
-//                .unsafeFlags(unsafe_flags_cxx, .when(configuration: .debug))
+                .unsafeFlags(unsafe_flags_cxx, .when(configuration: .debug))
 			],
             swiftSettings: [
                 .define("HAVE_OPENSSL"),
@@ -171,7 +170,6 @@ let package = Package(
                 .define("HAVE_ASPRINTF"),
                 .define("HAVE_GETIFADDRS"),
                 .define("HAVE_STRNDUP"),
-//                .define("HAVE_CONFIG_H"),
             ]
 		),
 
@@ -289,11 +287,11 @@ let package = Package(
 				.define("HAVE_STPCPY"),
 				.define("HAVE_VASPRINTF"),
 				.define("HAVE_ASPRINTF"),
-				.define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
+				.define("PACKAGE_STRING", to: "\"SideServer 1.0\""),
 				.define("HAVE_GETIFADDRS"),
 				.define("HAVE_STRNDUP"),
                 .define("HAVE_CONFIG_H"),
-//                .unsafeFlags(unsafe_flags, .when(configuration: .debug))
+                .unsafeFlags(unsafe_flags, .when(configuration: .debug))
 			],
 			cxxSettings: [
 				.headerSearchPath("include/"),
@@ -306,10 +304,10 @@ let package = Package(
 				.define("HAVE_STPCPY"),
 				.define("HAVE_VASPRINTF"),
 				.define("HAVE_ASPRINTF"),
-				.define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
+				.define("PACKAGE_STRING", to: "\"SideServer 1.0\""),
 				.define("HAVE_GETIFADDRS"),
 				.define("HAVE_STRNDUP"),
-//                .unsafeFlags(unsafe_flags_cxx, .when(configuration: .debug))
+                .unsafeFlags(unsafe_flags_cxx, .when(configuration: .debug))
 			]
         ),
 
@@ -331,7 +329,7 @@ let package = Package(
 				.define("HAVE_STPCPY"),
 				.define("HAVE_VASPRINTF"),
 				.define("HAVE_ASPRINTF"),
-				.define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
+				.define("PACKAGE_STRING", to: "\"SideServer 1.0\""),
 				.define("HAVE_GETIFADDRS"),
 				.define("HAVE_STRNDUP"),
 //				.unsafeFlags(unsafe_flags)
@@ -349,7 +347,7 @@ let package = Package(
 				.define("HAVE_STPCPY"),
 				.define("HAVE_VASPRINTF"),
 				.define("HAVE_ASPRINTF"),
-				.define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
+				.define("PACKAGE_STRING", to: "\"SideServer 1.0\""),
 				.define("HAVE_GETIFADDRS"),
 				.define("HAVE_STRNDUP"),
 //				.unsafeFlags(unsafe_flags_cxx)
@@ -373,31 +371,29 @@ let package = Package(
 				.headerSearchPath("include/"),
 				.headerSearchPath("../dependencies/libimobiledevice-glue/include"),
 				.headerSearchPath("../dependencies/libplist/include"),
-//				.headerSearchPath("../dependencies/libplist/include/plist"),
 				.define("HAVE_OPENSSL"),
 				.define("HAVE_STPNCPY"),
 				.define("HAVE_STPCPY"),
 				.define("HAVE_VASPRINTF"),
 				.define("HAVE_ASPRINTF"),
-				.define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
+				.define("PACKAGE_STRING", to: "\"SideServer 1.0\""),
 				.define("HAVE_GETIFADDRS"),
 				.define("HAVE_STRNDUP"),
-//				.unsafeFlags(unsafe_flags)
+				.unsafeFlags(unsafe_flags)
 			],
 			cxxSettings: [
 				.headerSearchPath("include/"),
 				.headerSearchPath("../dependencies/libimobiledevice-glue/include"),
 				.headerSearchPath("../dependencies/libplist/include"),
-//				.headerSearchPath("../dependencies/libplist/include/plist"),
 				.define("HAVE_OPENSSL"),
 				.define("HAVE_STPNCPY"),
 				.define("HAVE_STPCPY"),
 				.define("HAVE_VASPRINTF"),
 				.define("HAVE_ASPRINTF"),
-				.define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
+				.define("PACKAGE_STRING", to: "\"SideServer 1.0\""),
 				.define("HAVE_GETIFADDRS"),
 				.define("HAVE_STRNDUP"),
-//				.unsafeFlags(unsafe_flags_cxx)
+				.unsafeFlags(unsafe_flags_cxx)
 			]
         ),
 
@@ -442,10 +438,10 @@ let package = Package(
 				.define("HAVE_STPCPY"),
 				.define("HAVE_VASPRINTF"),
 				.define("HAVE_ASPRINTF"),
-				.define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
+				.define("PACKAGE_STRING", to: "\"SideServer 1.0\""),
 				.define("HAVE_GETIFADDRS"),
 				.define("HAVE_STRNDUP"),
-//				.unsafeFlags(unsafe_flags)
+				.unsafeFlags(unsafe_flags)
             ],
             cxxSettings: [
 				.headerSearchPath("include/"),
@@ -456,10 +452,10 @@ let package = Package(
 				.define("HAVE_STPCPY"),
 				.define("HAVE_VASPRINTF"),
 				.define("HAVE_ASPRINTF"),
-				.define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
+				.define("PACKAGE_STRING", to: "\"SideServer 1.0\""),
 				.define("HAVE_GETIFADDRS"),
 				.define("HAVE_STRNDUP"),
-//				.unsafeFlags(unsafe_flags_cxx)
+				.unsafeFlags(unsafe_flags_cxx)
             ]
         ),
 
@@ -477,8 +473,6 @@ let package = Package(
             ],
             publicHeadersPath: "include",
             cSettings: [
-//				.headerSearchPath("../dependencies/libplist/include"),
-//				.headerSearchPath("../dependencies/libplist/include/plist"),
 				.headerSearchPath("../dependencies/libplist/libcnary/include"),
 				.headerSearchPath("../dependencies/libusbmuxd/include"),
 				.headerSearchPath("../dependencies/libimobiledevice-glue/include/"),
@@ -488,14 +482,12 @@ let package = Package(
                 .define("HAVE_STPCPY"),
                 .define("HAVE_VASPRINTF"),
                 .define("HAVE_ASPRINTF"),
-                .define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
+                .define("PACKAGE_STRING", to: "\"SideServer 1.0\""),
                 .define("HAVE_GETIFADDRS"),
                 .define("HAVE_STRNDUP"),
-//				.unsafeFlags(unsafe_flags)
+				.unsafeFlags(unsafe_flags)
             ],
             cxxSettings: [
-//				.headerSearchPath("../dependencies/libplist/include"),
-//				.headerSearchPath("../dependencies/libplist/include/plist"),
 				.headerSearchPath("../dependencies/libplist/libcnary/include"),
 				.headerSearchPath("../dependencies/libusbmuxd/include"),
 				.headerSearchPath("../dependencies/libimobiledevice-glue/include/"),
@@ -505,14 +497,14 @@ let package = Package(
                 .define("HAVE_STPCPY"),
                 .define("HAVE_VASPRINTF"),
                 .define("HAVE_ASPRINTF"),
-                .define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
+                .define("PACKAGE_STRING", to: "\"SideServer 1.0\""),
                 .define("HAVE_GETIFADDRS"),
                 .define("HAVE_STRNDUP"),
-//				.unsafeFlags(unsafe_flags_cxx)
+				.unsafeFlags(unsafe_flags_cxx)
             ]
         )
     ],
-    swiftLanguageModes: [.v5, .v6],
+    swiftLanguageModes: [.v5],
     cLanguageStandard: .gnu11,
     cxxLanguageStandard: .gnucxx14
 )
