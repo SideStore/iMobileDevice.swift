@@ -122,9 +122,9 @@ let package = Package(
 			name: "iMobileDevice",
 			dependencies: [
 				"libimobiledevice",
-				"libplist",
+//				"libplist",
 				"libusbmuxd",
-				"libimobiledevice-glue"
+//				"libimobiledevice-glue"
 			],
 			cSettings: [
 				.headerSearchPath("../libimobiledevice/dependencies/libimobiledevice"),
@@ -140,7 +140,8 @@ let package = Package(
 				.define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
 				.define("HAVE_GETIFADDRS"),
 				.define("HAVE_STRNDUP"),
-//				.unsafeFlags(unsafe_flags)
+//                .define("HAVE_CONFIG_H"),
+//                .unsafeFlags(unsafe_flags, .when(configuration: .debug))
 			],
 			cxxSettings: [
 				.headerSearchPath("../libimobiledevice/dependencies/libimobiledevice"),
@@ -156,8 +157,19 @@ let package = Package(
 				.define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
 				.define("HAVE_GETIFADDRS"),
 				.define("HAVE_STRNDUP"),
-//				.unsafeFlags(unsafe_flags_cxx)
-			]
+//                .define("HAVE_CONFIG_H"),
+//                .unsafeFlags(unsafe_flags_cxx, .when(configuration: .debug))
+			],
+            swiftSettings: [
+                .define("HAVE_OPENSSL"),
+                .define("HAVE_STPNCPY"),
+                .define("HAVE_STPCPY"),
+                .define("HAVE_VASPRINTF"),
+                .define("HAVE_ASPRINTF"),
+                .define("HAVE_GETIFADDRS"),
+                .define("HAVE_STRNDUP"),
+//                .define("HAVE_CONFIG_H"),
+            ]
 		),
 
         // MARK: - libfragmentzip
@@ -184,6 +196,15 @@ let package = Package(
 				.headerSearchPath("libfragmentzip-source/include/libfragmentzip"),
 				.headerSearchPath("libfragmentzip-source/dependencies/libgeneral/include")
 			],
+            swiftSettings: [
+                .define("HAVE_OPENSSL"),
+                .define("HAVE_STPNCPY"),
+                .define("HAVE_STPCPY"),
+                .define("HAVE_VASPRINTF"),
+                .define("HAVE_ASPRINTF"),
+                .define("HAVE_GETIFADDRS"),
+                .define("HAVE_STRNDUP")
+            ],
 			linkerSettings: [
 				.linkedLibrary("z"),
 			]
@@ -252,8 +273,8 @@ let package = Package(
 				.headerSearchPath("../dependencies/libimobiledevice"),
 				.headerSearchPath("../dependencies/libimobiledevice/common"),
 				.headerSearchPath("../dependencies/libimobiledevice/include"),
+                .headerSearchPath("../dependencies/libimobiledevice/include/libimobiledevice"),
 				.headerSearchPath("../dependencies/libimobiledevice-glue/include"),
-				.headerSearchPath("../dependencies/libusbmuxd/include"),
 				.define("HAVE_OPENSSL"),
 				.define("HAVE_STPNCPY"),
 				.define("HAVE_STPCPY"),
@@ -262,7 +283,8 @@ let package = Package(
 				.define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
 				.define("HAVE_GETIFADDRS"),
 				.define("HAVE_STRNDUP"),
-//				.unsafeFlags(unsafe_flags)
+                .define("HAVE_CONFIG_H"),
+//                .unsafeFlags(unsafe_flags, .when(configuration: .debug))
 			],
 			cxxSettings: [
 				.headerSearchPath("include/"),
@@ -270,7 +292,6 @@ let package = Package(
 				.headerSearchPath("../dependencies/libimobiledevice/common"),
 				.headerSearchPath("../dependencies/libimobiledevice/include"),
 				.headerSearchPath("../dependencies/libimobiledevice-glue/include"),
-				.headerSearchPath("../dependencies/libusbmuxd/include"),
 				.define("HAVE_OPENSSL"),
 				.define("HAVE_STPNCPY"),
 				.define("HAVE_STPCPY"),
@@ -279,7 +300,7 @@ let package = Package(
 				.define("PACKAGE_STRING", to: "\"AltServer 1.0\""),
 				.define("HAVE_GETIFADDRS"),
 				.define("HAVE_STRNDUP"),
-//				.unsafeFlags(unsafe_flags_cxx)
+//                .unsafeFlags(unsafe_flags_cxx, .when(configuration: .debug))
 			]
         ),
 
