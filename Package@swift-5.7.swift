@@ -1,4 +1,4 @@
-// swift-tools-version: 6.0
+// swift-tools-version: 5.7
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import Foundation
@@ -119,15 +119,13 @@ let package = Package(
 	],
 
 	targets: [
-        // MARK: ---- iMobileDevice (Wrapper) ----
-
 		.target(
 			name: "iMobileDevice",
 			dependencies: [
 				"libimobiledevice",
-				"libplist",
+//				"libplist",
 				"libusbmuxd",
-				"libimobiledevice-glue"
+//				"libimobiledevice-glue"
 			],
 			cSettings: [
 				.headerSearchPath("../libimobiledevice/dependencies/libimobiledevice"),
@@ -175,8 +173,7 @@ let package = Package(
             ]
 		),
 
-        // MARK: ---- libfragmentzip (CLI) ----
-        
+        // MARK: - libfragmentzip
 		.executableTarget(
 			name: "libfragmentzip-cli",
 			dependencies: [
@@ -213,8 +210,6 @@ let package = Package(
 				.linkedLibrary("z"),
 			]
 		),
-        
-        // MARK: ---- CURL (System Lib) ----
 
 		.systemLibrary(
 			name: "libcurl",
@@ -225,8 +220,6 @@ let package = Package(
 			]
 		),
 
-        // MARK: ---- libfragmentzip ----
-        
         .target(
             name: "libfragmentzip",
             dependencies: [
@@ -254,7 +247,6 @@ let package = Package(
 			linkerSettings: [
 				.linkedLibrary("z"),
 				.linkedLibrary("curl", .when(platforms: [.macOS])),
-                .unsafeFlags(["-fprofile-instr-generate"])
 			]
         ),
 
@@ -512,7 +504,7 @@ let package = Package(
             ]
         )
     ],
-    swiftLanguageModes: [.v5, .v6],
+    swiftLanguageVersions: [.v5],
     cLanguageStandard: .gnu11,
     cxxLanguageStandard: .gnucxx14
 )
